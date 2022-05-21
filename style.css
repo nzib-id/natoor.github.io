@@ -147,12 +147,14 @@ table {
 /* Navbar Section */
 .navbar {
   width: 100%;
-  background-color: #fef9f7;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
   overflow: hidden;
   height: auto;
   z-index: 999;
   position: fixed;
   padding: 20px;
+  box-shadow: 2px 0 10px rgba(1, 1, 1, 0.25);
 }
 
 .navbar a {
@@ -427,6 +429,44 @@ h2:hover {
   vertical-align: baseline;
 }
 
+.gallerycard {
+  width: 700px;
+}
+
+/* Scroll On Top */
+
+.scrollontop {
+  font-size: 25px;
+  text-align: center;
+  width: 4rem;
+  height: 4rem;
+  color: antiquewhite;
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(1, 1, 1, 0.5);
+  transition: ease-in-out 0.5s;
+}
+
+.scrollontop:active {
+  box-shadow: none;
+}
+
+.scrollontop:hover {
+  background-color: rgba(47, 61, 82, 0.75);
+}
+
+.scrollontop i {
+  position: relative;
+  top: 25%;
+}
+
+.scrollontop a:visited {
+  color: antiquewhite;
+}
+
 /* Responsive */
 
 .res-button {
@@ -478,7 +518,6 @@ h2:hover {
 
   .navbar-content li {
     margin: 0;
-    border-bottom: 1px solid #f2f2f2;
     padding: 20px;
     position: relative;
   }
