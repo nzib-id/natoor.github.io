@@ -194,6 +194,7 @@ table {
 .header {
   float: left;
   margin-left: 50px;
+  overflow: hidden;
 }
 
 .header a {
@@ -256,7 +257,6 @@ table {
   margin: 50px 0 0 0;
   font-size: 1.5rem;
 }
-
 /* End of Jumbotron Section */
 
 /* About Section */
@@ -524,19 +524,20 @@ table {
 
 /* Responsive */
 
-.res-button {
-  font: 20px "Open Sans", sans serif;
+#res-button {
+  display: none;
+  font-size: 20px;
+  height: 100%;
   border: none;
   background: rgb(47, 61, 82);
   color: antiquewhite;
-  display: none;
-  padding: 20px 20px;
+  padding: 24px;
   float: right;
   margin: auto;
 }
 
-@media only screen and (max-width: 1080px) {
-  .res-button {
+@media only screen and (max-width: 1200px) {
+  #res-button {
     display: inline-block;
   }
 
@@ -692,9 +693,6 @@ table {
   }
 }
 
-@media only screen and (max-width: 720px) {
-}
-
 @media only screen and (max-width: 640px) {
   .intro {
     width: 80%;
@@ -714,9 +712,17 @@ table {
     margin: 20px;
   }
 
+  .about-content img {
+    width: 100%;
+  }
+
   .about-content p {
     line-height: 2em;
-    word-spacing: 0.5;
+    word-spacing: 0.1;
+  }
+
+  .button {
+    font-size: 1em;
   }
 
   #gallery {

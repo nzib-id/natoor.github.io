@@ -6,7 +6,7 @@ function navbar() {
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function (e) {
-  if (!e.target.matches(".res-button")) {
+  if (!e.target.matches("#res-button")) {
     var Dropdown = document.getElementById("navbar-dropdown");
     if (Dropdown.classList.contains("show")) {
       Dropdown.classList.remove("show");
