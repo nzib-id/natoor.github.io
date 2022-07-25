@@ -488,6 +488,22 @@ table {
   padding: 5px;
 }
 
+/* Footer */
+
+#footer {
+  color: rgb(250, 235, 215);
+  background-color: rgb(47, 61, 82);
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  text-align: center;
+  line-height: 2em;
+}
+
+#footer a {
+  color: rgb(39, 147, 122);
+}
+
 /* Scroll On Top */
 
 .scrollontop {
@@ -690,6 +706,10 @@ table {
 
   .campaign-content img {
     margin: 50px;
+  }
+
+  #footer {
+    padding: 50px;
   }
 }
 
