@@ -152,6 +152,18 @@ table {
   box-sizing: border-box;
 }
 
+h2 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 90px 0;
+  transition: all 0.5s;
+}
+
+h2:hover {
+  font-size: 70px;
+}
+
 /* Navbar Section */
 .navbar {
   width: 100%;
@@ -264,37 +276,44 @@ table {
 #about {
   background-color: antiquewhite;
   width: 100%;
-  height: 100vh;
+  height: auto;
+  padding: 3rem 8rem;
   overflow: hidden;
 }
 
 .about-content {
-  width: 80%;
+  display: inline-block;
+  width: 100%;
   height: auto;
-  margin: 10%;
 }
 
 .about-content img {
-  width: 45%;
-  height: 45%;
+  width: 55%;
+  padding: 2rem 0 2rem 2rem;
+  height: auto;
   float: right;
   mix-blend-mode: multiply;
+}
+
+.about-content h2 {
+  display: inline-block;
+  margin: 10rem 0 2rem 0;
+  text-align: left;
+}
+
+.about-content p {
   position: relative;
-}
-
-.about-content h2,
-.campaign-content h2 {
-  font-size: 50px;
-  font-weight: 800;
-  text-transform: uppercase;
-  margin: 65px 0px 40px 0px;
+  color: rgb(96, 103, 115);
+  width: 45%;
   float: left;
-  transition: all 0.5s;
+  text-align: justify;
+  font-weight: 400;
+  word-spacing: 1.5px;
+  line-height: 1.5rem;
 }
 
-.about-content h2:hover,
-.campaign-content h2:hover {
-  font-size: 70px;
+.about-content span {
+  font-weight: bold;
 }
 
 .button {
@@ -303,9 +322,10 @@ table {
   font-weight: 400;
   text-transform: uppercase;
   background: rgb(39, 147, 122);
+  box-shadow: 0 2px 5px rgba(1, 1, 1, 0.2);
   border: transparent;
   border-radius: 50px;
-  margin: 40px 0px 20px 0px;
+  margin: 40px 0px 0px 0px;
   padding: 15px 80px;
   float: left;
   transition: all 0.5s;
@@ -321,21 +341,7 @@ table {
   background-color: antiquewhite;
   color: rgb(47, 61, 82);
   border: 1px solid rgb(47, 61, 82);
-}
-
-.about-content p {
-  color: rgb(96, 103, 115);
-  width: 500px;
-  float: left;
-  text-align: justify;
-  font-weight: 400;
-  word-spacing: 1.5px;
-  line-height: 1.5rem;
-  padding-left: 5px;
-}
-
-.about-content span {
-  font-weight: bold;
+  box-shadow: none;
 }
 
 .tooltip {
@@ -380,17 +386,6 @@ table {
   color: antiquewhite;
 }
 
-.campaign-content h2 {
-  width: 100%;
-  text-align: center;
-  font-size: 50px;
-  font-weight: bold;
-  transition: all 0.5s;
-}
-
-.campaign-content h2:hover {
-  font-size: 70px;
-}
 .campaign-content h3 {
   color: antiquewhite;
   font-size: 25px;
@@ -437,55 +432,27 @@ table {
 #gallery {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: antiquewhite;
   width: 100%;
   height: auto;
   overflow: hidden;
   padding: 50px;
-}
-
-#gallery h2 {
-  width: 100%;
-  text-align: center;
-  font-size: 50px;
-  font-weight: bold;
-  margin: 50px;
-  transition: all 0.5s;
-}
-
-#gallery h2:hover {
-  font-size: 70px;
+  background-color: antiquewhite;
 }
 
 .gallery-content {
   width: 80%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px;
   overflow: hidden;
 }
 
-.gallery-card {
-  display: flex;
-  flex-direction: column;
-  font-size: 0.9rem;
-  text-align: center;
-  background-color: white;
-  padding: 10px;
-}
-
-.gallery-card img {
+.gallery-content img {
   width: 100%;
-  height: 300px;
+  height: 30rem;
   object-fit: cover;
   object-position: center;
-}
-
-.gallery-card p {
-  margin: 10px 0 0 0;
-  padding: 5px;
 }
 
 /* Footer */
@@ -552,7 +519,7 @@ table {
   margin: auto;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1080px) {
   #res-button {
     display: inline-block;
   }
@@ -623,36 +590,41 @@ table {
   }
 
   #about {
+    padding: 5rem;
     height: auto;
   }
 
   .about-content {
-    display: inline-block;
-    padding: 70px;
+    display: block;
     margin: auto;
     width: 100%;
     text-align: center;
   }
 
+  .about-content img {
+    display: block;
+    width: 100%;
+    padding: 1rem 3rem 1rem 3rem;
+    float: none;
+  }
+
   .about-content h2 {
-    margin: 65px 0 40px 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin: 0 0 40px 0;
     float: none;
   }
 
   .about-content p {
+    width: 100%;
     padding: 0;
     font-size: large;
     line-height: 2em;
-    width: 100%;
     float: none;
     text-align: justify;
     text-align-last: center;
     margin: auto;
-  }
-
-  .about-content img {
-    width: 50%;
-    float: none;
   }
 
   .button {
@@ -711,6 +683,20 @@ table {
   #footer {
     padding: 50px;
   }
+
+  .gallery-content {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-snap-align: start;
+    scrollbar-3dlight-color: transparent;
+  }
+
+  .gallery-content img {
+    flex: 1 0 100%;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -748,13 +734,9 @@ table {
   #gallery {
     padding: 10px;
   }
-  .gallery-content {
+  /* .gallery-content {
     overflow: hidden;
     width: 100%;
     grid-template-columns: 1fr;
-  }
-
-  .gallery-card {
-    scroll-snap-align: center;
-  }
+  } */
 }
